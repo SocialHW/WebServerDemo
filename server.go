@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-	fileServer := http.FileServer(http.Dir("static"))
+	fileServer := http.FileServer(http.Dir("."))
 	http.Handle("/", fileServer)
 
 	log.Println("Listening...")
